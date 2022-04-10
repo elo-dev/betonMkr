@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Layout, Row, Typography } from 'antd'
 import { Map, Placemark } from 'react-yandex-maps'
 
@@ -11,13 +11,15 @@ import style from './Contacts.module.scss'
 const { Title } = Typography
 
 const Contacts = () => {
+  useEffect(() => window.scrollTo(0, 0), [])
+
   return (
     <Layout className={style.contacts}>
       <Title level={1}>КОНТАКТЫ</Title>
       <CheckoutForm />
       <Row>
         <Col span={24}>
-          <p className={style.subtitle}>РАБОТАЕМ КРУГЛОСУТОЧНО!</p>
+          <p className={style.subtitle}>РАБОТАЕМ КАЖДЫЙ ДЕНЬ!</p>
           <p className={style.phone_num}>8 (800) 333-64-20</p>
           <p className={style.phone_num}>8 (499) 343-64-20</p>
         </Col>

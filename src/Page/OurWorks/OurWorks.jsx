@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Carousel, Col, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -11,6 +11,8 @@ import style from './OurWorks.module.scss'
 const { Title } = Typography
 
 const OurWorks = () => {
+  useEffect(() => window.scrollTo(0, 0), [])
+
   const settings = {
     dots: true,
     infinite: true,

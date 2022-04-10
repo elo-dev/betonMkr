@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Col, Divider, Input, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -30,6 +30,7 @@ const schemeIcons = [
 ]
 
 const Сalculations = () => {
+  useEffect(() => window.scrollTo(0, 0), [])
   const [activeCheckbox, setActiveCheckbox] = useState(1)
 
   const [inputWidthA, setInputWidthA] = useState(0)
